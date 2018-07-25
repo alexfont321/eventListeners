@@ -11,7 +11,9 @@ const getIdActivate = document.querySelector("#activate-flight");
 const getPowerList = document.querySelector("#powerList");
 const getFlight = document.querySelector("#flight");
 const getMind = document.querySelector("#mindreading")
-const getXray = document.querySelector("#xray")
+const getXray = document.querySelector("#xray");
+const getActivateAll = document.querySelector("#activate-all");
+const getDeactivateAll = document.querySelector("#deactivate-all");
 
 
 
@@ -41,13 +43,24 @@ function handlerFunction (event) {
     // }
 };
 
-getIdActivate.addEventListener("click", handlerFunction)
+getActivateAll.addEventListener("click", handlerFunction)
 
 /*
     Now write two more event handlers that activate the other two powers
     when the corresponding buttons are clicked.
 */
 
+
+getDeactivateAll.addEventListener("click", function () {
+    for (let i = 0; i < getPowerList.children.length; i++) {
+        getPowerList.children[i].classList.remove("enabled");
+        getPowerList.children[i].classList.add("disabled");
+        }
+
+        console.log(getFlight.classList.value);
+        console.log(getMind.classList.value);
+        console.log(getXray.classList.value);
+})
 
 
 
