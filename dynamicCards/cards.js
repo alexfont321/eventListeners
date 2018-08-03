@@ -35,35 +35,36 @@
 
 
 
-/////Streator
+///Streator
 
-// const getCreateCard = document.getElementById('cardHolderDiv');
-// const getText = document.getElementById('text');
-// const getCreate = document.getElementById('create');
-
-
-// function cardString(){
-//     let newCards = '';
-//     newCards += `<div class="deleteButtonCard">`
-//     newCards += `<p>${getText.value}</p>`
-//     newCards += `<button class="delete" id="delete">Delete this card</button>`
-//     newCards += `</div>`
-//     getCreateCard.innerHTML += newCards;
-//     console.log(newCards);
-// };
+const getCreateCard = document.getElementById('cardHolderDiv');
+const getText = document.getElementById('text');
+const getCreate = document.getElementById('create');
+// const deleteButton = document.getElementById('delete');
 
 
-// function addDeleteButton(e){
-//     if(e.target.className === 'delete'){
-//         e.target.parentElement.remove();
-//     }
-//     console.log(e);
-// };
+function cardString(){
+    let newCards = '';
+    newCards += `<div class="deleteButtonCard">`
+    newCards += `<p>${getText.value}</p>`
+    newCards += `<button class="delete" id="delete">Delete this card</button>`
+    newCards += `</div>`
+    getCreateCard.innerHTML += newCards;
+    console.log(newCards);
+};
+
+
+function addDeleteButton(event){
+    if(event.target.id === 'delete'){
+        event.target.parentElement.remove();
+    }
+    console.log(e);
+};
 
 
 
-// getCreate.addEventListener('click', cardString);
-// document.body.addEventListener('click', addDeleteButton);
+getCreate.addEventListener('click', cardString);
+getCreateCard.addEventListener('click', addDeleteButton);
 
 
 
